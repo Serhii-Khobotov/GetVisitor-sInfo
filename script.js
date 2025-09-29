@@ -15,7 +15,7 @@ async function fetchData() {
   console.log(userIP.ip)
   
 
-  const userInfo = await fetch(`http://ip-api.com/json/${userIP.ip}?${SEARCH_PARAMS_IN_URL}`)
+  const userInfo = await fetch(`https://ip-api.com/json/${userIP.ip}?${SEARCH_PARAMS_IN_URL}`)
     .then((response) => response.json())
     .then((result) => result)
     .catch((err) => console.error('Could not retrieve user info', err));
